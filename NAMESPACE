@@ -2,6 +2,7 @@
 
 export(evolve)
 export(generate_population)
+export(hh_geometric)
 export(introduce)
 export(remove)
 import(dplyr)

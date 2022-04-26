@@ -4,12 +4,14 @@
 \alias{remove}
 \title{Remove individuals from a population}
 \usage{
-remove(population, n)
+remove(population, n, prop)
 }
 \arguments{
 \item{population}{Population to transform}
 
 \item{n}{Number of individuals to remove}
+
+\item{prop}{Proportion of individuals to remove}
 }
 \value{
 A population

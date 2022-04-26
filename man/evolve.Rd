@@ -4,12 +4,14 @@
 \alias{evolve}
 \title{Let the individuals of a population move around}
 \usage{
-evolve(population, n)
+evolve(population, n, prop)
 }
 \arguments{
 \item{population}{Population to transform}
 
 \item{n}{Number of individuals to introduce}
+
+\item{prop}{Proportion of individuals to remove}
 }
 \value{
 A population

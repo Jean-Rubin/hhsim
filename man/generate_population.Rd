@@ -4,12 +4,12 @@
 \alias{generate_population}
 \title{Generate a new population}
 \usage{
-generate_population(n_ind, size_hh)
+generate_population(n_ind, hh_gen)
 }
 \arguments{
 \item{n_ind}{Number of individuals}
 
-\item{size_hh}{Average size of households}
+\item{hh_gen}{A household generator}
 }
 \value{
 A population

@@ -4,14 +4,14 @@
 \alias{introduce}
 \title{Introduce new individuals in a population}
 \usage{
-introduce(population, n, size_hh)
+introduce(population, n, hh_gen)
 }
 \arguments{
 \item{population}{Population to transform}
 
 \item{n}{Number of individuals to introduce}
 
-\item{size_hh}{Average size of introduced households}
+\item{hh_gen}{A household generator}
 }
 \value{
 A population
