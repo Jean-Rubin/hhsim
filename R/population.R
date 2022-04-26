@@ -1,11 +1,9 @@
-#' Generate a population
+#' Generate a new population
 #'
+#' @param n_ind Number of individuals
+#' @param size_hh Average size of households
 #'
-#'
-#'
-#'
-#'
-#'
+#' @return A population
 #'
 #' @export
 generate_population <- function(n_ind, size_hh) {
@@ -17,6 +15,13 @@ generate_population <- function(n_ind, size_hh) {
     select(-new_hh)
 }
 
+#' Introduce new individuals in a population
+#' 
+#' @param population Population to transform
+#' @param n Number of individuals to introduce
+#' @param size_hh Average size of introduced households
+#' 
+#' @return A population
 #' @export
 introduce <- function(population, n, size_hh) {
   max_ind <- population |> pull(ind) |> as.integer() |> max()
@@ -31,6 +36,12 @@ introduce <- function(population, n, size_hh) {
   population |> bind_rows(new_population)
 }
 
+#' Let the individuals of a population move around
+#' 
+#' @param population Population to transform
+#' @param n Number of individuals to introduce
+#' 
+#' @return A population
 #' @export
 evolve <- function(population, n) {
   n_ind <- nrow(population)
@@ -52,8 +63,14 @@ evolve <- function(population, n) {
     select(-hh.x, -hh.y)
 }
 
+#' Remove individuals from a population
+#' 
+#' @param population Population to transform
+#' @param n Number of individuals to remove
+#' 
+#' @return A population
 #' @export
-exit <- function(population, n) {
+remove <- function(population, n) {
   n_ind <- nrow(population)
   stopifnot(
     "n must be less than population size" = n <= n_ind

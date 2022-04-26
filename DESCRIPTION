@@ -1,10 +1,24 @@
 Package: hhsim
-Title: What the Package Does (One Line, Title Case)
+Title: Household Population Simulation
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Jean", family = "Rubin", role = c("aut", "cre"))
-Description: Simple household population simulation functions
+    person(
+        given = "Jean",
+        family = "Rubin",
+        email = "john.doe@test.com",
+        role = c("aut", "cre")
+    )
+Description: Simple household population simulation functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Depends:
+    R (>= 4.1.0)
+Imports:
+    tibble,
+    dplyr,
+    tidyr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
